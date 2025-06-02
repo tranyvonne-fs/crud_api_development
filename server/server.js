@@ -8,6 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 const characterRoutes = require('./routes/characterRoutes');
+const authRoutes = require('./routes/authRoutes');
 app.use('/api/characters', characterRoutes);
 app.use("/api/auth", authRoutes); 
 

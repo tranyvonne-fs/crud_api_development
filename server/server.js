@@ -9,6 +9,7 @@ app.use(express.json());
 
 const characterRoutes = require('./routes/characterRoutes');
 app.use('/api/characters', characterRoutes);
+app.use("/api/auth", authRoutes); 
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('✅ MongoDB connected'))
